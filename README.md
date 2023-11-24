@@ -27,4 +27,4 @@ This repository contains Python code for the data analysis and visualization of 
 
 1. Connecticut Data (2021). Accidental Drug-Related Deaths 2012-2021. Retrieved from [https://data.ct.gov/Health-and-Human-Services/Accidental-Drug-Related-Deaths-2012-2022/rybz-nyjw]
 2. Color palette documentation is used for data visualization from [https://seaborn.pydata.org/index.html] 
-3. Referrenced retrieved from [https://merishnasuwal.github.io/drug-deaths-data-analysis]
+3. Referrence retrieved from [https://merishnasuwal.github.io/drug-deaths-data-analysis]
