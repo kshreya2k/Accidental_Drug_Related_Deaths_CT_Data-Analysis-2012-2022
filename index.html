@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accidental Drug Deaths Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+</head>
+<body>
+
+    <header>
+        
+        <h1>Accidental Drug Deaths Analysis using Python</h1>
+        
+        <div class="title-img">
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#data-analysis">Data Analysis</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                    <li><a href="#references">References</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://github.com/kshreya2k/Accidental_Drug_Related_Deaths_CT_Data-Analysis-2012-2022" target="_blank" class="github-link">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </header>
+    <div id="main-body">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <!-- Insert Introduction content here -->
+            <div class="main-container">
+                <div class="sub-div">
+                    <p>
+                        The rise in drug use in Connecticut has raised serious health concerns, especially with the increase in accidental drug-related deaths. To tackle this concern, my project conducts a thorough data analysis of accidental drug fatality data in Connecticut from 2012 to 2022. Using the Python programming language and key libraries like Numpy, Matplotlib, SciPy, Pandas, and Seaborn, this study aims to uncover insights into the factors behind the alarming increase in drug-related fatalities.
+                    </p>
+                    <p>
+                        The main goal of this project is to map and summarize evidence, providing a deep understanding of the changing patterns of drug-related deaths using open-source data. Through advanced data science techniques, I aim to break down the rising trend and support public health surveillance in understanding the complex dynamics of drug-related deaths. An essential part of the analysis includes incorporating toxicology results to identify and track specific drugs contributing to the crisis in Connecticut.
+                    </p>
+                    <p>
+                        This project not only addresses immediate concerns about accidental drug deaths but also establishes a foundation for informed policy decisions and targeted interventions. Using data science, the aim is to contribute valuable insights that empower public health authorities to develop effective strategies for reducing the impact of drug-related fatalities in our community.
+                    </p>
+                </div>
+                <div class="sub-div">
+                    <img src="Drugs_Analysis_Graph.png" alt="Drugs_Analysis_Graph">
+                </div>
+            </div>
+        </section>
+
+        <section id="data-analysis">
+            <h2>Data Analysis</h2>
+            <!-- Insert Data Analysis content here -->
+            <div id="Analysis-container">
+
+                <div id="Subject-analysis">
+                    <p>Import Libraries</p>
+                    <button onclick="toggleCode()">Code</button>
+                </div>
+                
+                <div id="code-container">
+                    <pre>
+                        <code>
+                            import numpy as np
+                            import matplotlib.pyplot as plt
+                            from scipy import stats
+                            import pandas as pd
+                            import seaborn as sns
+                            
+                            #to ignore warnings
+                            import warnings
+                            warnings.filterwarnings('ignore')
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+            <div id="Analysis-container">
+
+                <div id="Subject-analysis">
+                    <p> Load Dataset</p>
+                    <button onclick="toggleCode()">Code</button>
+                </div>
+                
+                    <p> Here is a sample of five rows of the data:</p>
+                <div id="code-container">
+                    <pre>
+                        <code>
+                            # Path to the dataset
+                            url = r"C:\Users\shrey\Documents\1st_Sem_Study\Projects\Accidental_Drug_Related_Deaths_CT\Accidental_Drug_Related_Deaths_2012-2022.csv"
+                            df = pd.read_csv(url)
+                            
+                            # Printing the data
+                            df.head(5)
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+            <div>
+
+                <h3>Number of Deaths Over Time</h3>
+                <img src="Deaths_over_time(Date).png" alt="Number of Deaths Over Time">
+            </div>
+
+            <div>
+                <h3>Distribution of Age</h3>
+                <img src="Distribution of Age.png" alt="Distribution of Age">
+            </div>
+
+            <div>
+                <h3>Count of Individuals by Race</h3>
+                <img src="Count of Individuals by Race.png" alt="Count of Individuals by Race">
+            </div>
+
+            <div>
+                <h3>Distribution of Deaths by Sex</h3>
+                <img src="Distribution of Deaths by Sex.png" alt="Distribution of Deaths by Sex">
+            </div>
+
+            <div>
+                <h3>Count of Individuals by Location</h3>
+                <img src="Count of Individuals by Location.png" alt="Count of Individuals by Location">
+            </div>
+
+            <div>
+                <h3>Count of Drug Mentions in Death Certificates</h3>
+                <img src="Count of Drug Mentions in Death Certificates.png" alt="Count of Drug Mentions in Death Certificates">
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <!-- Insert Conclusion content here -->
+        </section>
+
+        <section id="references">
+            <!-- Insert References content here -->
+            <p>
+                Data source: Connecticut Data (2021). Accidental Drug-Related Deaths 2012-2021. Retrieved from
+                <a href="https://data.ct.gov/Health-and-Human-Services/Accidental-Drug-Related-Deaths-2012-2022/rybz-nyjw" target="_blank">https://data.ct.gov/Health-and-Human-Services/Accidental-Drug-Related-Deaths-2012-2022/rybz-nyjw</a>
+            </p>
+            <p>
+                Additional information from Centers for Disease Control and Prevention (CDC) (2021, November 17). New CDC data show drug overdose deaths increased in 2020, driven by synthetic opioids. Retrieved from
+                <a href="https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2021/20211117.html" target="_blank">https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2021/20211117.html</a>
+            </p>
+            <p>
+                Color palette documentation is used for data visualization from
+                <a href="https://seaborn.pydata.org/index.html" target="_blank">https://seaborn.pydata.org/index.html</a>
+            </p>
+        
+            <p>
+                Reference retrieved from
+                <a href="https://merishnasuwal.github.io/drug-deaths-data-analysis" target="_blank">https://merishnasuwal.github.io/drug-deaths-data-analysis</a>
+            </p>
+            <p>
+                Exploratory Data Analysis using Python, International Journal of Innovative Technology and Exploring Engineering (IJITEE), ISSN: 2278-3075, Volume-8, Issue-12, October 2019. Retrieved from
+                <a href="https://www.researchgate.net/profile/Dr-Subhendu-Pani/publication/337146539_IJITEE/links/5dc70b124585151435fb427e/IJITEE.pdf" target="_blank">https://www.researchgate.net/profile/Dr-Subhendu-Pani/publication/337146539_IJITEE/links/5dc70b124585151435fb427e/IJITEE.pdf</a>
+            </p>
+            <p>
+                Github icon image is retrieved from
+                <a href="https://fontawesome.com/icons/github?f=brands&s=solid" target="_blank">https://fontawesome.com/icons/github?f=brands&s=solid</a>
+            </p>
+            
+        </section>
+        <section id="Contact">
+            <h2> Contact </h2>
+            <p>
+                Thank you for checking my project
+            </p>
+            <p>
+                Feel free to reach out to me! I'm open to collaboration, feedback, and connecting with fellow enthusiasts. You can contact me at shreyabanik2k@gmail.com or connect with me on LinkedIn.
+            </p>
+        </section>
+    </div>
+    <script>
+        // JavaScript code for handling section clicks and displaying/hiding content
+        document.addEventListener('DOMContentLoaded', function() {
+            var sections = ['introduction', 'data-analysis', 'conclusion', 'references','Contact'];
+
+            sections.forEach(function(section) {
+                var link = document.querySelector('a[href="#' + section + '"]');
+                var content = document.getElementById(section);
+
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    hideAllSections();
+                    content.style.display = 'block';
+                });
+            });
+
+            function hideAllSections() {
+                sections.forEach(function(section) {
+                    document.getElementById(section).style.display = 'none';
+                });
+            }
+        });
+
+        function toggleCode() {
+        var codeContainer = document.getElementById('code-container');
+        codeContainer.style.display = (codeContainer.style.display === 'none' || codeContainer.style.display === '') ? 'block' : 'none';
+    }
+    
+    </script>
+
+</body>
+</html>
