@@ -92,10 +92,10 @@ nav a:hover {
 }
 
 #Analysis-container {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 450px;
+    margin-bottom: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #000000d2;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -111,16 +111,19 @@ nav a:hover {
     border-radius: 5px;
     padding: 15px;
     overflow-x: auto;
+    
 }
+
 
 pre {
     margin: 0;
-    white-space: pre-wrap;
+    
 }
 
 code {
     color: #333;
     font-size: 14px;
+    text-align: left;
 }
 
 
@@ -128,6 +131,11 @@ code {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #bebebe;
+}
+
+#Subject-analysis p {
+    color: #ddd;
 }
 
 button {
