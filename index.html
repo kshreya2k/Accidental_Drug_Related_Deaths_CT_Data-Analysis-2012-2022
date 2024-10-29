@@ -11,13 +11,14 @@
 
     <header>
         
-        <h1>Accidental Drug Deaths Analysis using Python</h1>
+        <h1>Statistical Analysis on Accidental Drug Deaths in Connecticut using Python</h1>
         
         <div class="title-img">
             <nav>
                 <ul>
                     <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#data-analysis">Data Analysis</a></li>
+                    <li><a href="#visualization">Visualization</a></li>
                     <li><a href="#conclusion">Conclusion</a></li>
                     <li><a href="#references">References</a></li>
                     <li><a href="#Contact">Contact</a></li>
@@ -45,91 +46,80 @@
                     </p>
                 </div>
                 <div class="sub-div">
-                    <img src="Drugs_Analysis_Graph.png" alt="Drugs_Analysis_Graph">
+                    <img src="images/Drugs_Analysis_Graph.png" alt="Drugs_Analysis_Graph">
                 </div>
             </div>
         </section>
 
+       <!------------------------------------->
         <section id="data-analysis">
-            <h2>Data Analysis</h2>
-            <!-- Insert Data Analysis content here -->
-            <div id="Analysis-container">
+            <div id="analysis-content">
+                <div class="first-inner-div">
+                    <div id="data-overview">
+                        <h2>Data Overview</h2>
+                        <p>The Accidental Drug Related Deaths dataset from 2012-2021 in Connecticut, obtained from the Connecticut Open Data Repository, highlights a significant public health concern. With drug overdoses being a major cause of injury-related deaths in the U.S., this dataset becomes crucial for understanding and addressing this pressing issue (Hedegaard, Minino, & Warner, 2020).</p>
+                        <p>The dataset is provided by the Office of the Chief Medical Examiner, offering a valuable resource for understanding and addressing substance abuse and overdose issues. It presents crucial information derived from toxicity reports, death certificates, and scene investigations. The dataset comprises 10.7K rows and 48 columns, with each row representing a drug-related death. It contains key demographic details, including age, race, and gender, are included, along with crucial data on the locations and substances detected in the overdose incidents.</p>
+                        <p>This dataset serves as a valuable resource for researchers, policymakers, and healthcare professionals seeking to analyze patterns, identify risk factors, and formulate effective interventions in combating the opioid epidemic. By offering insights into the characteristics and circumstances surrounding accidental drug-related deaths, the dataset plays a pivotal role in shaping evidence-based strategies to mitigate the impact of substance abuse on public health.</p>
+                    </div>
+                    <div>
+                        <p>These are the 48 columns describes the demographics of individuals who died in accidents due to drug toxicity:</p>
+                        <img src="images/columns.png">
+                    </div>
+                    <div>
+                        <p>Here is a sample of the dataset:</p>
+                       
 
-                <div id="Subject-analysis">
-                    <p>Import Libraries</p>
-                    <button onclick="toggleCode()">Code</button>
+                        <!-- Container to display the table -->
+                        <div id="table-container"></div>
+                    </div>
+                </div>
+                <div class="second-inner-div">
+                    <button onclick="printCode()">Print Code</button>
+                    <div id="code-container"></div>
+                </div>
+            </div>
+
+        </section>
+        <!------------------------------------->
+
+
+        <section id="visualization">
+            <h2>Visualization</h2>
+                <div id="graph-part-1">
+                    <div id="graph">
+                        <img src="images/Deaths_over_time(Date).png" alt="Number of Deaths Over Time" >
+                        <h4>(Number of Deaths Over Time)</h4>
+                    </div>
+                    <div id="graph">
+                        <img src="images/Distribution_Deaths_by_Sex.png" alt="Distribution of Deaths by Sex" >
+                        <h4>(Distribution of Deaths by Sex)</h4>
+                    </div>
+                </div>
+
+                <div id="graph-part">
+                    <div id="graph">
+                        <img src="images/Distribution_of_Age.png" alt="Distribution of Age" >
+                        <h4>(Distribution of Age)</h4>
+                    </div>
+
+                    <div id="graph">
+                        <img src="images/Individuals_by_Race.png" alt="Count of Individuals by Race" >
+                        <h4>(Count of Individuals by Race)</h4>
+                    </div>
                 </div>
                 
-                <div id="code-container">
-                    <pre>
-                        <code>
-                            import numpy as np
-                            import matplotlib.pyplot as plt
-                            from scipy import stats
-                            import pandas as pd
-                            import seaborn as sns
-                            
-                            #to ignore warnings
-                            import warnings
-                            warnings.filterwarnings('ignore')
-                        </code>
-                    </pre>
+                <div id="graph-part">
+                    <div id="graph">
+                        <img src="images/Count_Individuals_Location.png" alt="Count of Individuals by Location" >
+                        <h4>(Count of Individuals by Location)</h4>
+                    </div>
+
+                    <div id="graph">
+                        <img src="images/Drugs_Analysis_Graph.png" alt="Count of Drug Mentions in Death Certificates" >
+                        <h4>(Count of Drug Mentions in Death Certificates)</h4>
+                    </div>
                 </div>
-
-            </div>
-
-            <div id="Analysis-container">
-
-                <div id="Subject-analysis">
-                    <p> Load Dataset</p>
-                    <button onclick="toggleCode()">Code</button>
-                </div>
-                
-                <div id="code-container">
-                    <pre>
-                        <code>
-                            # Path to the dataset
-                            url = r"C:\Users\shrey\Documents\1st_Sem_Study\Projects\Accidental_Drug_Related_Deaths_CT\Accidental_Drug_Related_Deaths_2012-2022.csv"
-                            df = pd.read_csv(url)
-                            
-                            # Printing the data
-                            df.head(5)
-                        </code>
-                    </pre>
-                </div>
-
-            </div>
-
-            <div>
-
-                <h3>Number of Deaths Over Time</h3>
-                <img src="Deaths_over_time(Date).png" alt="Number of Deaths Over Time">
-            </div>
-
-            <div>
-                <h3>Distribution of Age</h3>
-                <img src="Distribution of Age.png" alt="Distribution of Age">
-            </div>
-
-            <div>
-                <h3>Count of Individuals by Race</h3>
-                <img src="Count of Individuals by Race.png" alt="Count of Individuals by Race">
-            </div>
-
-            <div>
-                <h3>Distribution of Deaths by Sex</h3>
-                <img src="Distribution of Deaths by Sex.png" alt="Distribution of Deaths by Sex">
-            </div>
-
-            <div>
-                <h3>Count of Individuals by Location</h3>
-                <img src="Count of Individuals by Location.png" alt="Count of Individuals by Location">
-            </div>
-
-            <div>
-                <h3>Count of Drug Mentions in Death Certificates</h3>
-                <img src="Count of Drug Mentions in Death Certificates.png" alt="Count of Drug Mentions in Death Certificates">
-            </div>
+            
         </section>
 
         <section id="conclusion">
@@ -138,6 +128,7 @@
         </section>
 
         <section id="references">
+            <h2>References</h2>
             <!-- Insert References content here -->
             <p>
                 Data source: Connecticut Data (2021). Accidental Drug-Related Deaths 2012-2021. Retrieved from
@@ -169,7 +160,7 @@
         <section id="Contact">
             <h2> Contact </h2>
             <p>
-                Thank you for checking my project
+                Thank you for checking my project. Hope you find it helpful.
             </p>
             <p>
                 Feel free to reach out to me! I'm open to collaboration, feedback, and connecting with fellow enthusiasts. You can contact me at shreyabanik2k@gmail.com or connect with me on LinkedIn.
@@ -179,7 +170,7 @@
     <script>
         // JavaScript code for handling section clicks and displaying/hiding content
         document.addEventListener('DOMContentLoaded', function() {
-            var sections = ['introduction', 'data-analysis', 'conclusion', 'references','Contact'];
+            var sections = ['introduction', 'data-analysis', 'visualization', 'conclusion', 'references','Contact'];
 
             sections.forEach(function(section) {
                 var link = document.querySelector('a[href="#' + section + '"]');
@@ -199,11 +190,210 @@
             }
         });
 
-        function toggleCode() {
-        var codeContainer = document.getElementById('code-container');
-        codeContainer.style.display = (codeContainer.style.display === 'none' || codeContainer.style.display === '') ? 'block' : 'none';
-    }
+        
     
+        function printCode() {
+           // Replace this with the actual code you want to print
+           var codeToPrint =  `
+# Import Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+import pandas as pd
+import seaborn as sns
+
+#to ignore warnings
+import warnings
+warnings.filterwarnings('ignore')
+
+# Load Dataset
+### Here is a sample of five rows of the data:
+# Path to the dataset
+url = r"C:\\Users\\shrey\\Documents\\1st_Sem_Study\\Projects\\Accidental_Drug_Related_Deaths_CT\\Accidental_Drug_Related_Deaths_2012-2022.csv"
+df = pd.read_csv(url)
+ 
+# Printing the data
+df.head(5)
+### The data set contains the following columns that describe the demographics of the patients such as their age, race, ethnicity, location and the kind of drug toxicity
+df.info()
+
+# Data Cleaning
+df.isnull().sum()
+# Replace blanks with 0 for numeric columns
+numeric_columns = df.select_dtypes(include=np.number).columns
+df[numeric_columns] = df[numeric_columns].fillna(0)
+
+# Replace blanks with "Not given" for object (non-numeric) columns
+object_columns = df.select_dtypes(exclude=np.number).columns
+df[object_columns] = df[object_columns].fillna("Not given")
+df.isnull().sum()
+
+# Remove duplicates
+df.drop_duplicates(inplace=True)
+df.info()
+
+# Statistical Analysis
+# Display statistics
+print("Basic Statistics:")
+print(df.describe())
+# Age column statistics
+sample_Age = df['Age']
+
+mean_Age = np.mean(sample_Age)
+median_Age = np.median(sample_Age)
+mode_Age = stats.mode(sample_Age)
+
+print(f"Mean Age: {mean_Age.round()}")
+print(f"Median Age: {median_Age.round()}")
+print(f"Mode Age: {mode_Age}")
+range_Age = np.ptp(sample_Age)
+variance_Age = np.var(sample_Age)
+std_dev_Age = np.std(sample_Age)
+
+print(f"Range of Ages: {range_Age}")
+print(f"Variance of Ages: {variance_Age}")
+print(f"Standard Deviation of Ages: {std_dev_Age}")
+
+# Gender column summary
+Gender_summary = df['Sex'].value_counts()
+print("\nGender Summary:")
+print(Gender_summary)
+
+# Exploratory Data Analysis (EDA)
+
+## Part 1 : Data Visualization on categorial columns
+df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
+
+# Sort the DataFrame by the 'Date' column
+df.sort_values('Date', inplace=True)
+
+# Plot the line graph
+plt.figure(figsize=(12, 6))
+sns.lineplot(x='Date', y=df.index, data=df)
+plt.title('Number of Deaths Over Time')
+plt.xlabel('Date')
+plt.ylabel('Number of Deaths')
+
+# Save the graph as an image file
+plt.savefig('Deaths_over_time(Date).png')
+
+plt.show()
+# Visualize Age distribution
+plt.figure(figsize=(10, 6))
+sns.histplot(df['Age'], bins=30, kde=True)
+plt.title('Distribution of Age')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+
+# Save the graph as an image file
+plt.savefig('Distribution_of_Age.png')
+
+plt.show()
+
+
+
+# Visualize the count of different races
+plt.figure(figsize=(10, 6))
+sns.countplot(x='Race', data=df, order=df['Race'].value_counts().index, color='skyblue')
+plt.title('Count of Individuals by Race')
+plt.xlabel('Race')
+plt.ylabel('Count')
+plt.xticks(rotation=90)
+
+plt.savefig('Individuals_by_Race.png')
+
+plt.show()
+
+
+# Visualize the count of deaths by Sex with different colors for each gender
+sex_counts = df['Sex'].value_counts()
+
+# Create a pie chart
+plt.figure(figsize=(10,6))
+plt.pie(sex_counts, labels=sex_counts.index, autopct='%1.1f%%', colors=['green', 'pink','violet'], wedgeprops=dict(width=0.3, edgecolor='gray'))
+plt.title('Distribution of Deaths by Sex')
+
+plt.savefig('Distribution_Deaths_by_Sex.png')
+
+plt.show()
+
+## Part 2 : Count of Individuals by Location
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Assuming df is your DataFrame
+plt.figure(figsize=(10, 8))
+sns.countplot(y='Location', data=df, order=df['Location'].value_counts().index, palette='Set2')
+plt.title('Count of Individuals by Location')
+plt.ylabel('Location')
+plt.xlabel('Count')
+
+plt.savefig('Count_Individuals_Location.png')
+plt.show()
+
+
+
+## Part 3 : Type of Drug Distribution 
+# Replace 'df' with your actual DataFrame name
+
+# List of categorical columns
+categorical_columns = ['Heroin', 'Heroin death certificate (DC)', 'Cocaine', 'Fentanyl', 'Fentanyl Analogue',
+                        'Oxycodone', 'Oxymorphone', 'Ethanol', 'Hydrocodone', 'Benzodiazepine', 'Methadone',
+                        'Meth/Amphetamine', 'Amphet', 'Tramad', 'Hydromorphone', 'Morphine (Not Heroin)',
+                        'Xylazine', 'Gabapentin', 'Opiate NOS', 'Heroin/Morph/Codeine', 'Other Opioid', 'Any Opioid']
+
+# Create a new DataFrame for numerical representation
+numerical_df = pd.DataFrame()
+
+# Convert categorical columns to numerical
+for column in categorical_columns:
+    numerical_df[column] = df[column].apply(lambda x: 1 if x == 'Y' else 0)
+
+# Display the resulting numerical DataFrame
+print(numerical_df.head())
+
+print(numerical_df.info())
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Specify the columns of interest
+drug_columns = ['Heroin', 'Heroin death certificate (DC)', 'Cocaine', 'Fentanyl', 'Fentanyl Analogue',
+                'Oxycodone', 'Oxymorphone', 'Ethanol', 'Hydrocodone', 'Benzodiazepine', 'Methadone',
+                'Meth/Amphetamine', 'Amphet', 'Tramad', 'Hydromorphone', 'Morphine (Not Heroin)',
+                'Xylazine', 'Gabapentin', 'Opiate NOS', 'Heroin/Morph/Codeine', 'Other Opioid', 'Any Opioid']
+
+# Create a subset DataFrame with the specified columns
+drug_data = df[drug_columns]
+
+# Calculate the counts for each drug
+drug_counts = drug_data.sum()
+
+# Plot the counts using a horizontal bar chart with logarithmic scale
+plt.figure(figsize=(10, 8))
+sns.barplot(x=drug_counts.values, y=drug_counts.index, palette='viridis')
+plt.xscale('log')  # Use logarithmic scale on the x-axis
+plt.title('Count of Drug Mentions in Death Certificates')
+plt.xlabel('Count (log scale)')
+plt.ylabel('Type of Drugs')
+
+# Adjust layout to prevent cutting off labels
+plt.tight_layout()
+
+# Save the figure
+plt.savefig('Drugs_Analysis_Graph.png')
+
+plt.show()`;
+
+            // Get the code container
+            var codeContainer = document.getElementById('code-container');
+
+            // Display the code in the code container
+            codeContainer.innerText = codeToPrint;
+
+            // Toggle the visibility of the code container
+            codeContainer.style.display = (codeContainer.style.display === 'none') ? 'block' : 'none';
+        }
     </script>
 
 </body>

@@ -2,6 +2,8 @@
 body, h1, ul, li {
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -91,51 +93,12 @@ nav a:hover {
     margin: 0 auto;
 }
 
-#Analysis-container {
-    max-width: 450px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #000000d2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-#Analysis-container div {
-    margin-bottom: 15px;
-}
-
-#code-container {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    overflow-x: auto;
-    
-}
-
-
-pre {
-    margin: 0;
-    
-}
-
-code {
-    color: #333;
-    font-size: 14px;
-    text-align: left;
-}
 
 
 #Subject-analysis{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #bebebe;
-}
-
-#Subject-analysis p {
-    color: #ddd;
 }
 
 button {
@@ -147,3 +110,62 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+#graph-part-1{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#graph-part{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+}
+
+#graph h4{
+    margin-left: 25%;
+}
+#graph img{
+    width: 75%;
+    height:auto;   
+}
+
+
+#analysis-content{
+    display: flex;
+}
+.first-inner-div {
+    width: 65%;
+    background-color: lightblue; /* Just for visibility */
+    padding: 2%;
+}
+
+  .second-inner-div {
+    width: 35%;
+    background-color: lightgreen; /* Just for visibility */
+    padding: 2%;
+    word-wrap: break-word;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button :hover {
+    color: yellow;
+}
+
+#code-container {
+    margin-top: 20px; /* Added margin for better spacing */
+    white-space: pre-wrap; /* Preserve line breaks */
+    font-family: monospace; /* Use a monospaced font for code */
+}
+
