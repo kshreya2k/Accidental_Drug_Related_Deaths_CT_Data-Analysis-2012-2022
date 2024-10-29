@@ -138,13 +138,13 @@ button {
 }
 .first-inner-div {
     width: 65%;
-    background-color: lightblue; /* Just for visibility */
+    /* background-color: lightblue; Just for visibility */
     padding: 2%;
 }
 
   .second-inner-div {
     width: 35%;
-    background-color: lightgreen; /* Just for visibility */
+    /* background-color: lightgreen; Just for visibility */
     padding: 2%;
     word-wrap: break-word;
 }
