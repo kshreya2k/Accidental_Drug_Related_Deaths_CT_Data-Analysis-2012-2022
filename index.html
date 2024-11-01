@@ -63,19 +63,123 @@
                     </div>
                     <div>
                         <p>These are the 48 columns describes the demographics of individuals who died in accidents due to drug toxicity:</p>
-                        <img src="images/columns.png">
+                        
                     </div>
                     <div>
-                        <p>Here is a sample of the dataset:</p>
-                       
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Column</th>
+                                    <th>Non-Null Count</th>
+                                    <th>Dtype</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>0</td><td>Date</td><td class="center">10654</td><td>object</td></tr>
+                                <tr><td>1</td><td>Date Type</td><td class="center">10654</td><td>object</td></tr>
+                                <tr><td>2</td><td>Age</td><td class="center">10654</td><td>float64</td></tr>
+                                <tr><td>3</td><td>Sex</td><td class="center">10654</td><td>object</td></tr>
+                                <tr><td>4</td><td>Race</td><td class="center">10654</td><td>object</td></tr>
+                                <tr><td>5</td><td>Ethnicity</td><td class="center">1575</td><td>object</td></tr>
+                                <tr><td>6</td><td>Residence City</td><td class="center">10476</td><td>object</td></tr>
+                                <tr><td>7</td><td>Residence County</td><td class="center">9486</td><td>object</td></tr>
+                                <tr><td>8</td><td>Residence State</td><td class="center">8756</td><td>object</td></tr>
+                                <tr><td>9</td><td>Injury City</td><td class="center">10476</td><td>object</td></tr>
+                                <tr><td>10</td><td>Injury County</td><td class="center">7372</td><td>object</td></tr>
+                                <tbody class="more-content">
+                                    <tr><td>11</td><td>Injury State</td><td class="center">7741</td><td>object</td></tr>
+                                    <tr><td>12</td><td>Injury Place</td><td class="center">10654</td><td>object</td></tr>
+                                    <tr><td>13</td><td>Description of Injury</td><td class="center">9850</td><td>object</td></tr>
+                                    <tr><td>14</td><td>Death City</td><td class="center">9197</td><td>object</td></tr>
+                                    <tr><td>15</td><td>Death County</td><td class="center">8090</td><td>object</td></tr>
+                                    <tr><td>16</td><td>Death State</td><td class="center">6873</td><td>object</td></tr>
+                                    <tr><td>17</td><td>Location</td><td class="center">10632</td><td>object</td></tr>
+                                    <tr><td>18</td><td>Location if Other</td><td class="center">1194</td><td>object</td></tr>
+                                    <tr><td>19</td><td>Cause of Death</td><td class="center">10654</td><td>object</td></tr>
+                                    <tr><td>20</td><td>Manner of Death</td><td class="center">10654</td><td>object</td></tr>
+                                    <tr><td>21</td><td>Other Significant Conditions</td><td class="center">1010</td><td>object</td></tr>
+                                    <tr><td>22</td><td>Heroin</td><td class="center">3110</td><td>object</td></tr>
+                                    <tr><td>23</td><td>Heroin death certificate (DC)</td><td class="center">740</td><td>object</td></tr>
+                                    <tr><td>24</td><td>Cocaine</td><td class="center">3855</td><td>object</td></tr>
+                                    <tr><td>25</td><td>Fentanyl</td><td class="center">6925</td><td>object</td></tr>
+                                    <tr><td>26</td><td>Fentanyl Analogue</td><td class="center">804</td><td>object</td></tr>
+                                    <tr><td>27</td><td>Oxycodone</td><td class="center">950</td><td>object</td></tr>
+                                    <tr><td>28</td><td>Oxymorphone</td><td class="center">157</td><td>object</td></tr>
+                                    <tr><td>29</td><td>Ethanol</td><td class="center">2878</td><td>object</td></tr>
+                                    <tr><td>30</td><td>Hydrocodone</td><td class="center">163</td><td>object</td></tr>
+                                    <tr><td>31</td><td>Benzodiazepine</td><td class="center">2493</td><td>object</td></tr>
+                                    <tr><td>32</td><td>Methadone</td><td class="center">938</td><td>object</td></tr>
+                                    <tr><td>33</td><td>Meth/Amphetamine</td><td class="center">127</td><td>object</td></tr>
+                                    <tr><td>34</td><td>Amphet</td><td class="center">359</td><td>object</td></tr>
+                                    <tr><td>35</td><td>Tramad</td><td class="center">284</td><td>object</td></tr>
+                                    <tr><td>36</td><td>Hydromorphone</td><td class="center">67</td><td>object</td></tr>
+                                    <tr><td>37</td><td>Morphine (Not Heroin)</td><td class="center">55</td><td>object</td></tr>
+                                    <tr><td>38</td><td>Xylazine</td><td class="center">792</td><td>object</td></tr>
+                                    <tr><td>39</td><td>Gabapentin</td><td class="center">3459</td><td>object</td></tr>
+                                    <tr><td>40</td><td>Opiate NOS</td><td class="center">3719</td><td>object</td></tr>
+                                    <tr><td>41</td><td>Heroin/Morph/Codeine</td><td class="center">401</td><td>object</td></tr>
+                                    <tr><td>42</td><td>Other Opioid</td><td class="center">128</td><td>object</td></tr>
+                                    <tr><td>43</td><td>Any Opioid</td><td class="center">7620</td><td>object</td></tr>
+                                    <tr><td>44</td><td>Other</td><td class="center">692</td><td>object</td></tr>
+                                    <tr><td>45</td><td>ResidenceCityGeo</td><td class="center">10488</td><td>object</td></tr>
+                                    <tr><td>46</td><td>InjuryCityGeo</td><td class="center">10488</td><td>object</td></tr>
+                                    <tr><td>47</td><td>DeathCityGeo</td><td class="center">10653</td><td>object</td></tr>
+                                </tbody>
+                            </tbody>
+                        </table>
+                        <button class="show-more-button" onclick="toggleTable()">Read More...</button>
 
                         <!-- Container to display the table -->
                         <div id="table-container"></div>
                     </div>
-                </div>
-                <div class="second-inner-div">
-                    <button onclick="printCode()">Print Code</button>
-                    <div id="code-container"></div>
+                    <div id="data-overview">
+                        <h2>Data Cleaning</h2>
+                        <p>Data cleaning is a critical step in preparing the dataset for analysis. The dataset contains various demographic and incident-related attributes, and it is essential to ensure its quality and reliability. The following steps were undertaken to clean the data:</p>
+
+                        <h4>1. Loading the Dataset</h4>
+                        <pre>
+                    url = r"C:\Users\shrey\Documents\1st_Sem_Study\Projects\Accidental_Drug_Related_Deaths_CT\Accidental_Drug_Related_Deaths_2012-2022.csv"
+                    df = pd.read_csv(url)
+                        </pre>
+
+                        <h4>2. Initial Exploration</h4>
+                        <pre>
+                    df.info()
+                        </pre>
+
+                        <h4>3. Identifying Missing Values</h4>
+                        <pre>
+                    df.isnull().sum()
+                        </pre>
+
+                    <h4>4. Handling Missing Values</h4>
+                    <p>For numeric columns, missing values were replaced with <strong>0</strong>. For object (non-numeric) columns, missing values were filled with <strong>"Not given"</strong>.</p>
+                    <pre>
+                numeric_columns = df.select_dtypes(include=np.number).columns
+                df[numeric_columns] = df[numeric_columns].fillna(0)
+
+                object_columns = df.select_dtypes(exclude=np.number).columns
+                df[object_columns] = df[object_columns].fillna("Not given")
+                    </pre>
+
+                    <h4>5. Removing Duplicates</h4>
+                    <pre>
+                df.drop_duplicates(inplace=True)
+                    </pre>
+
+                    <h4>6. Final Check for Missing Values</h4>
+                    <pre>
+                df.isnull().sum()
+                    </pre>
+
+                    <h4>7. Data Summary</h4>
+                    <pre>
+                print("Basic Statistics:")
+                print(df.describe())
+                    </pre>
+
+                    <p>By following these steps, the dataset was thoroughly cleaned and prepared for in-depth statistical analysis and exploratory data analysis (EDA). The resulting DataFrame is now a reliable source for insights into accidental drug-related deaths in Connecticut.</p>
                 </div>
             </div>
 
@@ -125,6 +229,12 @@
         <section id="conclusion">
             <h2>Conclusion</h2>
             <!-- Insert Conclusion content here -->
+            <p>The comprehensive analysis of the dataset on accidental drug fatalities in Connecticut from 2012 to 2022 provides critical insights into age distribution and demographic patterns, which are essential for informing public health strategies and policy decisions. The findings indicate a mean age of 43.5 years and a standard deviation of approximately 12.6, suggesting that the majority of individuals affected by these incidents are in their middle age. The age range extends from newborns to individuals as old as 87, highlighting the pervasive nature of the drug crisis across various life stages.           </p>
+            <p>A significant observation is the pronounced gender disparity in the data, with males comprising 74% of the fatalities. This suggests a critical need for targeted intervention programs aimed at men, as well as a reevaluation of existing support structures to address the unique challenges faced by this demographic. The modal age of 36 further emphasizes a specific group particularly vulnerable to drug-related incidents, warranting focused prevention efforts and community outreach tailored to this age cohort.            </p>
+            <p>Moreover, the dataset reveals gaps in demographic data, particularly regarding race and ethnicity, with notable non-response rates in these categories. This lack of complete data could hinder the development of effective, tailored public health interventions. Addressing these gaps through enhanced data collection methodologies will be crucial for future analyses.            </p>
+            <p>Additionally, the variations in non-null counts across various demographic columns, such as residence and injury details, indicate areas where improved data collection could yield richer insights. Understanding the geographical distribution of fatalities may uncover regional trends and hotspots, allowing for more localized intervention strategies.            </p>
+            <p>Overall, these findings underscore the urgent need for continued research and data collection to combat the rising tide of drug-related fatalities. Enhanced public awareness campaigns, targeted intervention programs, and policy reforms, grounded in empirical data, are imperative to mitigate this public health crisis effectively. By leveraging the insights gained from this analysis, stakeholders can work collaboratively to develop comprehensive strategies that address the underlying factors contributing to accidental drug fatalities, ultimately fostering healthier communities across Connecticut.            </p>
+
         </section>
 
         <section id="references">
@@ -190,7 +300,17 @@
             }
         });
 
-        
+        function toggleTable() {
+            const moreContent = document.querySelector('.more-content');
+            const button = document.querySelector('.show-more-button');
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "table-row-group";
+                button.textContent = "Show Less...";
+            } else {
+                moreContent.style.display = "none";
+                button.textContent = "Read More...";
+            }
+        }
     
         function printCode() {
            // Replace this with the actual code you want to print

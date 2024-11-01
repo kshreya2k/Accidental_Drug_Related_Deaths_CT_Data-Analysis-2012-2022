@@ -137,13 +137,13 @@ button {
     display: flex;
 }
 .first-inner-div {
-    width: 65%;
+    width: 97%;
     /* background-color: lightblue; Just for visibility */
     padding: 2%;
 }
 
   .second-inner-div {
-    width: 35%;
+    width: 3%;
     /* background-color: lightgreen; Just for visibility */
     padding: 2%;
     word-wrap: break-word;
@@ -169,3 +169,43 @@ button :hover {
     font-family: monospace; /* Use a monospaced font for code */
 }
 
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+    font-size: 0.7em;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.center {
+    text-align: center;
+}
+
+.more-content {
+    display: none;
+}
+.show-more-button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
